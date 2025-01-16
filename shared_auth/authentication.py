@@ -28,6 +28,7 @@ class JWTAuthentication(authentication.BaseAuthentication):
             user_id=payload['user_id'],
             mobile_number=payload['mobile_number'],
             email=payload['email'],
-            roles=payload['roles']
+            roles=payload['roles'],
+            authenticated=True
         )
         return (user, None)
